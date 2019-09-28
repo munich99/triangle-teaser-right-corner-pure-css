@@ -13,7 +13,7 @@
         #triangle {
             width: 20vw;
             height: 20vw;            
-            background-color: black;
+            background-color: transparent;
             position: absolute;
             top:0; right: 0;
         }
@@ -53,20 +53,56 @@
             margin-left: 1vw;  
         }
 
-
-
         #ribbon-contant img{
             height: 4vw;
             width: auto; 
             vertical-align: middle;   
         }
+
+        #shadow, #shadow2  {
+            position: absolute;
+            top:0; right: 0;
+        }
+
+        #shadow {
+            width: 20.5vw;
+            height: 20.5vw;
+        }
+
+        #shadow2 {
+            width: 21vw;
+            height: 21vw;
+        }
+
+        #shadow::before, #shadow2::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            border-color: transparent;
+            border-style: solid;            
+            border-right-color: rgba(0, 128, 0, 0.3);
+            border-top-color: rgba(0, 128, 0, 0.3);
+        }
+
+        #shadow::before {
+            border-width: 10.25vw;
+        }
+
+        #shadow2::before {
+            border-width: 10.5vw;
+        }
+
+
     </style>
 
   </head>
   <body>
-    <div id="triangle">
+        <div id="shadow"></div>
+        <div id="shadow2"></div>
+   
+    
+    <div id="triangle">        
         <div id="ribbon-contant">made width pure&nbsp;&nbsp;<img class="middle"  alt="pure css" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/363px-CSS3_logo_and_wordmark.svg.png"></div>
-    </div>
-    </div>
-  </body>
+    </div>    
+   </body>
 </html>
