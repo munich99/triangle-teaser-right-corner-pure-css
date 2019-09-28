@@ -6,13 +6,42 @@
 
     <style>
         body {
-          background-color: black;
-          color:white;
-        }      
+            background-color: black;
+            color:white;
+        }  
+
+        #triangle {
+            width: 10vw;
+            height: 10vw;            
+            background-color: #fff;
+            position: absolute;
+            top:0; right: 0;
+        }
+
+        #triangle::before,
+        #triangle::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            border-color: transparent;
+            border-style: solid;
+        }
+
+        #triangle::before {
+            border-width: 5vw;
+            border-right-color: green;
+            border-top-color: green;
+        }
+
+        #triangle::after {
+            border-width: 2vw;
+            border-right-color: yellow;
+            border-top-color: yellow;
+        }    
     </style>
 
   </head>
   <body>
-    triangle teaser right corner - pur css
+    <div id="triangle"></div>
   </body>
 </html>
